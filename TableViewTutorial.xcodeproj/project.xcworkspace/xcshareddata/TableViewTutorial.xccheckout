@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FC6B0CFA-AE8E-494D-9AE2-1BBCF1E4872F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F4DACE890028BA0DA0D2A6F2610016E753CED596</key>
+		<string>https://github.com/awseeley/TableViewTutorial.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TableViewTutorial.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F4DACE890028BA0DA0D2A6F2610016E753CED596</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/awseeley/TableViewTutorial.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F4DACE890028BA0DA0D2A6F2610016E753CED596</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F4DACE890028BA0DA0D2A6F2610016E753CED596</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TableViewTutorial</string>
+		</dict>
+	</array>
+</dict>
+</plist>
