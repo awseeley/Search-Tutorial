@@ -9,17 +9,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var tableView: UITableView!
     
     
-    var tableData: [String] = ["Red Velvet", "Brownie", "Bannna Bread", "Vanilla", "Minty"]
-    var tableDataDetail: [String] = ["Small", "Medium", "Large", "Small", "Medium"]
+    struct Cake {
+        var name = String()
+        var size = String()
+    }
     
-    var filteredTableData = [String]()
+    var cakes = [Cake(name: "Red Velvet", size: "Small"),
+                 Cake(name: "Brownie", size: "Medium"),
+                 Cake(name: "Bannna Bread", size: "Large"),
+                 Cake(name: "Vanilla", size: "Small"),
+                 Cake(name: "Minty", size: "Medium")]
+    
+    var filteredCakes = [Cake]()
     
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        filteredTableData = tableData
+        filteredCakes = cakes
         
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
@@ -32,24 +40,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func updateSearchResults(for searchController: UISearchController) {
         // If we haven't typed anything into the search bar then do not filter the results
         if searchController.searchBar.text! == "" {
-            filteredTableData = tableData
+            filteredCakes = cakes
         } else {
         // Filter the results
-            filteredTableData = tableData.filter { $0.lowercased().contains(searchController.searchBar.text!.lowercased()) }
+            filteredCakes = cakes.filter { $0.name.lowercased().contains(searchController.searchBar.text!.lowercased()) }
         }
         
         self.tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.filteredTableData.count
+        return self.filteredCakes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell 	{
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cell")
         
-        cell.textLabel?.text = self.filteredTableData[indexPath.row]
-        cell.detailTextLabel?.text = self.tableDataDetail[indexPath.row]
+        cell.textLabel?.text = self.filteredCakes[indexPath.row].name
+        cell.detailTextLabel?.text = self.filteredCakes[indexPath.row].size
         
         return cell
     }
